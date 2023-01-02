@@ -52,16 +52,11 @@ class Rectangle:
 
     def __str__(self):
         """returns pictorial representation of rectangle"""
+        if self.__width == 0 or self.__height == 0:
+            return ("")
         rect = []
         for i in range(0, self.__height):
             for j in range(0, self.__width):
                 [rect.append("#")]
             [rect.append("\n")]
         return "".join(rect)
-
-
-my_rectangle = Rectangle(2, 4)
-print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
-
-print(str(my_rectangle))
-print(repr(my_rectangle))
