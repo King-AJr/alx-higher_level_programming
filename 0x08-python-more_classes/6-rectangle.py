@@ -53,9 +53,21 @@ class Rectangle:
     def __str__(self):
         """returns pictorial representation of rectangle"""
         if self.__width == 0 or self.__height == 0:
-            return ("")
+            return ""
         rect = []
         for i in range(0, self.__height):
             for j in range(0, self.__width):
-                [rect.append("#")]                                  [rect.append("\n")]
+                [rect.append("#")]
+            [rect.append("\n")]
         return "".join(rect)
+
+    def __repr__(self):
+        """Return the string representation of the Rectangle."""
+        rect = "Rectangle(" + str(self.__width)
+        rect += ", " + str(self.__height) + ")"
+        return rect
+
+    def __del__(self):
+        """print a message for every deletion"""
+        type(self).number_of_instances -= 1
+        print("Bye rectangle...")
