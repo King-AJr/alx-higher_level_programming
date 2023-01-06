@@ -1,0 +1,24 @@
+#3-say_my_name.txt
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+
+this module contains a function say_my_name(first_name, last_name):
+
+function say_my_name takes two arguments representing both first name and last name then prints them out
+
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+>>> say_my_name("Bob")
+My name is Bob
+
+
+if first name or last name is not a string a TypeError is raised
+
+>>> say_my_name(12, "White")
+first_name must be a string
+
+
+>>> say_my_name("blub", 13)
+last_name must be a string
