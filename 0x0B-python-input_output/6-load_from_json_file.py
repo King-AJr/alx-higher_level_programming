@@ -3,9 +3,7 @@
 import json
 
 
-
 def load_from_json_file(filename):
     """creates an object from filename"""
-    with open(filename, 'r') as file:
-        python-obj = json.load(file)
-    return python-obj
+    with open(filename, "r") as file:
+        return json.load(file)
