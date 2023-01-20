@@ -5,7 +5,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """this represents a rectangle instance,with the getter and setter for the properties width, height,x and y axis"""
+    """this represents a rectangle instance"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
         self.width = width
@@ -69,3 +69,6 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("value must be >= 0")
         self.__y = value
+
+    def area(self):
+        return self.__width * self.__height
