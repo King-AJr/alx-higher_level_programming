@@ -1,7 +1,7 @@
 -- Creates a table in current database in mysql server
 -- insert data into newly created table
 
-CREATE table IF NOT EXISTS second_table(
+CREATE TABLE IF NOT EXISTS second_table(
 	id INT,
 	name VARCHAR(256),
 	score INT
