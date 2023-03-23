@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """
 display all values in the states where name matches an arguent
-# Usage: ./1-filter_states.py <mysql username> \
-#                             <mysql password> \
-#                             <database name>
+ Usage: ./1-filter_states.py <mysql username> \
+                             <mysql password> \
+                             <database name>
                               <state name searched>   
 """
 
