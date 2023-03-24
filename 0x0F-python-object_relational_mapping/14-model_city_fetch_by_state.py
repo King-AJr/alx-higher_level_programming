@@ -4,6 +4,7 @@ Update name of state with an id of 2
 """
 import sys
 from model_state import Base, State
+from model_city import City
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
@@ -13,5 +14,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).filter_by(id=2).update({'name': 'New Mexico'})
-    session.commit()
+    result = session.query(State, City).join(City, State.id == City.state_id).all()
+    for state, city in result:
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
+
+
+    session.close()
