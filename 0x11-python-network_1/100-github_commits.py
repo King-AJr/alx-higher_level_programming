@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+takes owner name and repo name
+then displays authors for the
+last 10 commits
+"""
 
 import sys
 import requests
