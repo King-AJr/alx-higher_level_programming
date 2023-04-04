@@ -13,6 +13,9 @@ if __name__ == "__main__":
     except HTTPError as e:
         print('Error code: ', e.code)
     except URLError as e:
-        print('Error code: ', e.code)
+        if hasattr(e, "code"):
+            print('Error code: ', e.code)
+        else:
+            print("Error: ",e)
     else:
         print('{}'.format(html.decode("utf-8")))
