@@ -10,7 +10,6 @@ import requests
 
 if __name__ == "__main__":
     url = f"https://api.github.com/repos/{sys.argv[1]}/{sys.argv[2]}/commits"
-    print(url)
     headers = {
             'Authorization': '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'
             }
