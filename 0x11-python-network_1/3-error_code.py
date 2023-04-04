@@ -16,6 +16,6 @@ if __name__ == "__main__":
         if hasattr(e, "code"):
             print('Error code: ', e.code)
         else:
-            print("Error: ",e)
+            print("Error: ", e)
     else:
         print('{}'.format(html.decode("utf-8")))
