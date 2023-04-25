@@ -7,9 +7,7 @@ const filename = args[0];
 const data = args[1];
 
 fs.appendFile(filename, data, (err) => {
-    if (err) {
-        console.error(err);
-        return;
-    }
+  if (err) {
+    console.error(err);
+  }
 });
-

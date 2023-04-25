@@ -1,7 +1,7 @@
 #!/usr/bin/node
-/* prints the number of movies where 
-the character Wedge Antilles with 
-character ID 18 is present*/
+/* prints the number of movies where
+the character Wedge Antilles with
+character ID 18 is present */
 const request = require('request');
 
 const args = process.argv.slice(2);
